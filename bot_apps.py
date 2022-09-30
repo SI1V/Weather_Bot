@@ -1,17 +1,17 @@
 import datetime
 import locale
 import requests
-from os import getenv
+import os
 from aiogram import Bot, types
 from aiogram.utils import executor
 from aiogram.dispatcher import Dispatcher
 from keys import key_city
 
 
-API_TOKEN = getenv('API_WEATHER')  # your token open weather
+API_TOKEN = os.environ['API_WEATHER']  # your token open weather
 locale.setlocale(locale.LC_ALL, 'ru_RU.UTF-8')
 
-bot = Bot(token=getenv('API_BOT_WEATHER'))  # your token bot
+bot = Bot(token=os.environ['API_BOT_WEATHER'])  # your token bot
 dp = Dispatcher(bot)
 
 
