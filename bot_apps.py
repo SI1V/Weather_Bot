@@ -42,7 +42,7 @@ async def get_weather(message: types.Message):
             datetime.datetime.fromtimestamp(data['sys']['sunrise']))
 
         await message.reply(f'Сегодня: {dt}\n'
-                            f'В городе {city_name} будет {weather}\n'
+                            f'В городе {city_name} сейчас {weather}\n'
                             f'Температура воздуха: {temperature} С°\n'
                             f'Ощущается как: {feels_like} С°\n'
                             f'Влажность воздуха: {humidity} % \n'
